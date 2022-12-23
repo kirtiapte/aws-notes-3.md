@@ -33,3 +33,11 @@
 - need RDS for one year - RDS reserved instances
 - database connections- rds proxy
 
+## No SQL database
+- no sql key-value document database
+- no need to provision a database, create a table, configure read/write capacity
+- automatically partition db , maintains 3 replicas in one region
+- use cases - user profiles, shopping carts, high volume read and write apps
+- use s3 for large objects, dynamodb for smaller objects
+
+
