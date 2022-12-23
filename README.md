@@ -92,3 +92,27 @@
 ### review 281
 
 
+# Redshift
+- relational database - petabyte scale distributed datawarehouse based on postgresql - OLAP
+- RDS - optimzed for OLTP, row based
+- MPP, columar data storage, data compression, single node data can be distributed across multiple nodes
+- ETL (extract, transform, load), OLAP, business intelligence
+- leader node, compute nodes, distribute nodes on multiple azs
+- client talk to leader node and query is performed on compute node
+- client can not talk to compute nodes
+- design tables - compression encoding, sort keys, timestamp based sort keys, how rows are distributed across node,
+default row distribution even, based on keys, all (look up tables)
+- loading data - simple - sql insert
+   - redshift copy s3, dynamodb. emr
+   - data pipelines
+   - on premise - storage gateway 
+   - AWS database migration service
+   - prefer copy command
+ - workload management - prioritized queue- long running low concurrency
+                       - short running queries - 50 concurrent
+                       - workload management configuration creation of queues
+ - Security - kms, master key, based on master key cluster, database key, data encryption keys
+            - IAM cluster permission
+ - Operations - can not modify existing cols., add new cols.
+ 
+
