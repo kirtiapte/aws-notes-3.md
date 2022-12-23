@@ -115,4 +115,57 @@ default row distribution even, based on keys, all (look up tables)
             - IAM cluster permission
  - Operations - can not modify existing cols., add new cols.
  
+ 
+ # Redshift spectrum
+- run sql queries on Amazon S3
+- configure metadata - define in redshift- uses metadata, s3 unstrcucted data format , parquest, csv, ion,json, avon
+- storage is separate from compute
+- integrated with Athena and EMr
+
+# EMR - Elastic Map Reduce
+- managed hadoop service
+- gives access to underlying OS 
+- hadoop tools, spark, presto, pig, hive
+- log processing insight, click stream analysis, genomic and lifesciences
+- stroage - hadoop distributed file system (HDFS), EMR file system
+- use HDFS for persistent cluster 24/7 analysis - used EBS or instance storage, transient jobs - EMR file system (s3)
+
+# When to use what
+- Amazon EMR - data processing with high customizations, machine learning, grapgh analysis
+- Amazon Redshift - complex queries against data warehouse, structured + unstructred data from various sources
+- Redshift Spectrum - run queries against S3 without loading data to data warehouse, queries against structured data
+- Amazon Athena - no compute cluster needed , ad-hoc queries
+
+# Datalakes
+ - data intelligence- collecting, analysing, visualizing
+ - single platform storgae, managment, analyics
+ - stroage, ingestion - s3 and s3 glacier storage for data lakes
+ - ingestion - Amazon Kinesis firehose - streaming data , transform and store to s3
+ - Bulk data upload - Amazon Snowball
+ - integrate with storage gateway to s3
+ - Query in place from s3 and s3 glacier
+ 1. s3 select - parquest. csv, json
+ 2. Amazon Athena - adhoc queries , preso
+ 3. redshift spectrum
+ 4. store data in parquest format
+ 5. gzip compression format
+ 6. Analytics - EMR, Amazon machine learning, Quicksight (visualization)
+ , Amzon recognizion (review 340)
+ 
+ ## Data cataloging
+ - metadata generation
+ - hive metastore catalg
+ - AWS glue - simplify data prep
+ - Steps for glue - collect data from rds, aurora, redshift, s3, Glue generates data catalog, ready for searching and querying , Apache spark to run jobs, Glue data catalog can be used from Amazon EMR, Athena, Redshift spectrum
+ 
+ ## Data warehouse vs data lake (342)
+ - data lake to data warehouse
+ 
+ ## Amazon MSK - managed kafka service (342)
+ ## AWS lake formation - data prep for 
+ 
+ # Kinesis
+- 
+- 
+- 
 
