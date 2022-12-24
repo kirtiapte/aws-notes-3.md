@@ -165,7 +165,14 @@ default row distribution even, based on keys, all (look up tables)
  ## AWS lake formation - data prep for 
  
  # Kinesis
-- 
-- 
-- 
+- stream data - continuously generated, small pieces of data, sequenced data
+- s3 notifications - s3 to sns, lamda, bucket level, prefix based, cost nothing - very simple streaming apps
+- Dynamodb streams - > every change in data in dynamodb - sent to dynamodb streams - tie lamda and sne dnotifications, iteration through 24 hours
+- Kinesis - streaming data, data strams, firehose (ingest data), kinesis analytics - real time analysis, video streams
+- data strems - stream processing, multiple clients, each client tracks stream, retain and replay the stream max 7 days, toolkit, service integrations, write processing apps using kinesis apis
+- kinesis data firehose - ingest data to s3, elastic search, redshift
+- pay for colume of data ingested
+- Analytics - real time intelligence - sql queries, build java apps
+- video strems - monitor video from web cam , integrate with ai services - real time alerts, traffic lights 
+- kinesis not recommended for etl or batch processing
 
