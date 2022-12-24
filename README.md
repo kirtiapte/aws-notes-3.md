@@ -176,3 +176,36 @@ default row distribution even, based on keys, all (look up tables)
 - video strems - monitor video from web cam , integrate with ai services - real time alerts, traffic lights 
 - kinesis not recommended for etl or batch processing
 
+# Moving data
+## AWS transfer acceleration
+- transfer less data to s3 (up to terabytes)
+- use cloudfront edge locations
+
+## AWS snowball
+- terabytes of data
+- physical shipping, snowball device - 80 terabytes data 
+- data encryptes, storage, compute, gpu optimized
+- use snowball - if taking weeks then snowball
+
+## AWS snowmobile
+- petabytes,exabytes of data, data is encrypted
+
+## AWS datasync
+- data tranfer on premise file storage to se, sfs, 
+- data migration, data replication, cold data archieval
+
+## AWS Data Pipeline
+- repetable, fault tolerant workloads, not for straming data
+- complex data processing workflows
+- keeps destination and source data insync
+
+## AWS migration Service
+- keep on prem data functional and migrate to cloud
+- gives replication
+
+## AWS SCT
+- schema conversion tool - migrate database schema to data warehouse
+- assessment report
+- does not give replication
+- update source code
+
